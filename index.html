@@ -18,13 +18,19 @@
             background: #444;
             padding: 15px;
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
         }
+        header nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
         header a {
             color: #0ff;
-            margin: 0 10px;
             text-decoration: none;
+            white-space: nowrap;
         }
         .container {
             display: flex;
@@ -73,6 +79,13 @@
             margin: 5px 0;
             text-decoration: none;
         }
+        @media (max-width: 600px) {
+            header nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -87,7 +100,6 @@
             <a href="#">DIY Page</a>
         </nav>
     </header>
-    
 
     <div class="container">
         <a class="button minecraft" href="minecraft://mc.boykelly.com:25565">Minecraft</a>
