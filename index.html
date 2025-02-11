@@ -3,94 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join mc.boykelly.com</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <title>Boykelly Game Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
-        /* Background Animation */
         body {
-            font-family: 'Orbitron', sans-serif;
+            font-family: 'Press Start 2P', cursive;
+            background: #222;
+            color: white;
             text-align: center;
             margin: 0;
             padding: 0;
-            height: 100vh;
+        }
+        header {
+            background: #444;
+            padding: 15px;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            color: #00ffcc;
-            background: black;
-            overflow: hidden;
-            position: relative;
         }
-        
-        /* Circuit Background Effect */
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://www.transparenttextures.com/patterns/circuit-board.png');
-            opacity: 0.1;
-            z-index: -1;
-        }
-
-        h1 {
-            font-size: 3rem;
-            text-shadow: 0px 0px 10px #00ffcc, 0px 0px 20px #00ffcc;
-        }
-
-        p {
-            font-size: 1.2rem;
-            text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7);
-        }
-
-        /* Glowing Button */
-        .join-btn {
-            display: inline-block;
-            padding: 15px 30px;
-            font-size: 20px;
-            font-weight: bold;
-            color: #000;
-            background: linear-gradient(45deg, #00ffcc, #0077ff);
+        header a {
+            color: #0ff;
+            margin: 0 10px;
             text-decoration: none;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #00ffcc, 0 0 20px #0077ff;
-            transition: all 0.3s ease-in-out;
-            position: relative;
         }
-
-        .join-btn:hover {
-            box-shadow: 0 0 20px #00ffcc, 0 0 40px #0077ff;
-            transform: scale(1.1);
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
         }
-
-        /* Subtle Floating Animation */
-        .join-btn {
-            animation: float 3s infinite ease-in-out;
+        .button {
+            display: inline-block;
+            width: 200px;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 14px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 3px solid white;
         }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
+        .minecraft { background: #5A9C28; border-color: #3E6B1F; }
+        .ark { background: #1C5C7C; border-color: #0E3D52; }
+        .valheim { background: #8B3E2F; border-color: #5E271E; }
+        .no-mans-sky { background: #BF3434; border-color: #891F1F; }
+        .raft { background: #2E86AB; border-color: #1B5D7C; }
+        .terraria { background: #3D8527; border-color: #2A5A19; }
+        .side-links {
+            position: fixed;
+            left: 10px;
+            top: 100px;
+            background: rgba(0,0,0,0.7);
+            padding: 10px;
+            border-radius: 5px;
         }
-
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            .join-btn {
-                font-size: 18px;
-                padding: 12px 25px;
-            }
+        .side-links a {
+            display: block;
+            color: #fff;
+            margin: 5px 0;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
-    <h1>BoyKelly</h1>
-    <p>Click the button below to join a server:</p>
-    <a class="join-btn" href="minecraft://mc.boykelly.com:25565">Minecraft</a>
+    <header>
+        <div>Boykelly Game Hub</div>
+        <nav>
+            <a href="#">Email</a>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Steam</a>
+            <a href="#">DIY Page</a>
+        </nav>
+    </header>
+    
+    <div class="side-links">
+        <a href="#">Cameras</a>
+        <a href="#">Synology</a>
+    </div>
+
+    <div class="container">
+        <a class="button minecraft" href="minecraft://mc.boykelly.com:25565">Minecraft</a>
+        <a class="button ark" href="#">Ark Survival Evolved</a>
+        <a class="button ark" href="#">Ark Ascended</a>
+        <a class="button valheim" href="#">Valheim</a>
+        <a class="button no-mans-sky" href="#">No Man's Sky</a>
+        <a class="button raft" href="#">Raft</a>
+        <a class="button terraria" href="#">Terraria</a>
+    </div>
 </body>
 </html>
